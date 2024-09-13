@@ -1,0 +1,97 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+section{
+    padding-top: 70px !important;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid whitesmoke;
+    height: 70px; /* Adjust height as needed */
+}
+
+.navbar.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering brand name using flexbox */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    flex-grow: 1; /* Take up space equally */
+}
+
+.navbar.scrolled .navbar-brand {
+    color: black;
+}
+
+/* Menu toggle styles */
+.menu-toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+}
+
+.menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled .menu-icon {
+    background-color: black;
+}
+
+/* Enquire Button Styles */
+.enquire-button {
+    padding: 8px 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar.scrolled .enquire-button {
+    border-color: black;
+    color: black;
+}

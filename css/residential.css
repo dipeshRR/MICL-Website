@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif; /* Default body font */
+    scroll-behavior: smooth;
+}
+
+/* Residential Section */
+.residential-section {
+    scroll-snap-align: start;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    color: #111;
+    background-color: #fff;
+}
+
+.residential-image {
+    width: 50%;
+    height: 100%;
+}
+
+.residential-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: transform 0.5s ease;
+}
+
+.residential-content {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.6);
+    transition: background 0.3s ease;
+}
+
+/* Font Styling */
+.residential-content h1, h2 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for titles */
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+.residential-content h3 {
+    font-family: 'Playfair Display', serif; /* Consistent with heading */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.residential-content .tagline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #888;
+    font-style: italic;
+}
+
+.residential-content .description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.current-status, .configurations {
+    margin-top: 20px;
+}
+
+.current-status h3, .configurations h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.rera {
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Hover effect for image */
+.residential-section:hover .residential-image img {
+    transform: scale(1.05);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .residential-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .residential-image, .residential-content {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .residential-content {
+        height: auto;
+        padding: 30px;
+    }
+
+    .residential-content h1, h2 {
+        font-size: 2.5rem;
+    }
+
+    .residential-content .description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .residential-content {
+        padding: 20px;
+    }
+
+    .residential-content h1, h2 {
+        font-size: 2rem;
+    }
+
+    .residential-content .description {
+        font-size: 1rem;
+    }
+
+    .residential-content .tagline {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .residential-content h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    .residential-content .description {
+        font-size: 0.9rem;
+    }
+
+    .residential-content .tagline {
+        font-size: 1rem;
+    }
+}
