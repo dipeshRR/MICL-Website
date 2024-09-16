@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="./css/amenities.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/project-location.css">
+    <link rel="stylesheet" href="./css/contact-form.css">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -307,22 +309,50 @@
 
         <section class="project-location">
             <div class="location-container">
-                <div class="location-info">
-                    <h2>Project Location</h2>
-                    <p>Discover the prime location of our project with easy access to key amenities and vibrant surroundings.</p>
-                    <p><strong>Address:</strong> 1234 Project Street, Mumbai, India</p>
-                    <p><strong>Landmark:</strong> Near XYZ Mall</p>
-                </div>
                 <div class="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3773.213572607199!2d72.8144!3d18.966173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cfb02f6362a3%3A0x82d7f9082e5f46aa!2sAaradhya%20Avaan!5e0!3m2!1sen!2sin!4v1725957843414!5m2!1sen!2sin"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="location-card">
+                        <div class="location-info">
+                            <h2>Project Location</h2>
+                            <p>Discover the prime location of our project with easy access to key amenities and vibrant surroundings.</p>
+                            <p><strong>Address:</strong> 1234 Project Street, Mumbai, India</p>
+                            <p><strong>Landmark:</strong> Near XYZ Mall</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         
-
+        <section class="contact-form-section">
+            <div class="form-container">
+                <h2>Get in Touch</h2>
+                <p>Fill out the form below, and our team will contact you shortly.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="phone" name="phone" required>
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+        
+        
     </main>
 
     <footer class="footer">
