@@ -1,82 +1,120 @@
 /* Section Styling */
 .contact-form-section {
+    margin-top: 1rem;
+    background-image: url(../asset/Elevation.jpg);
+    background-size: cover;
+    background-position: center;
     padding: 100px 20px;
-    background: linear-gradient(135deg, #d9eff9, #89cdf0); /* Light, luxurious gradient */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position: relative;
-    transition: background 0.6s ease;
     scroll-snap-align: start;
     position: relative;
+    transition: background 0.6s ease;
 }
 
-.contact-form-section:hover {
-    background: linear-gradient(135deg, #c2e5f7, #60b7e1); /* Richer colors on hover */
+/* Apply a blur effect to the background image */
+.contact-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Adjust opacity for desired effect */
+    backdrop-filter: blur(8px); /* Adjust blur amount */
+    z-index: -1; /* Make sure it's behind the content */
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Image Styling */
+.card-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
 }
 
 /* Form Container */
 .form-container {
-    background-color: #fff;
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    width: 100%;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 0 16px 16px 0;
 }
 
 /* Title and Paragraph */
 .form-container h2 {
     font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: 700;
+    margin-bottom: 16px;
+    font-weight: 600;
     color: #333;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
 }
 
 .form-container p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #666;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    line-height: 1.5;
 }
 
 /* Form Group and Inputs */
 .form-group {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     width: 100%;
 }
 
 .form-group input, 
 .form-group textarea {
     width: 100%;
-    padding: 15px 20px;
-    background-color: #f9f9f9;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    font-size: 1.1rem;
+    padding: 12px 16px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
     transition: border-color 0.3s ease, background-color 0.3s ease;
     color: #333;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-group input:focus, 
 .form-group textarea:focus {
-    border-color: #60b7e1;
-    background-color: #e0f7fa;
+    border-color: #007BFF;
+    background-color: #e9f2ff;
     outline: none;
 }
 
 /* Floating Labels */
 .form-group label {
     position: absolute;
-    left: 20px;
-    top: 15px;
-    font-size: 1.1rem;
+    left: 16px;
+    top: 14px;
+    font-size: 1rem;
     color: #aaa;
     transition: all 0.3s ease;
     pointer-events: none;
@@ -86,26 +124,28 @@
 .form-group input:not(:placeholder-shown) ~ label, 
 .form-group textarea:focus ~ label, 
 .form-group textarea:not(:placeholder-shown) ~ label {
-    top: -10px;
-    font-size: 0.9rem;
-    color: #60b7e1;
+    top: -8px;
+    font-size: 0.875rem;
+    color: #007BFF;
 }
 
 /* Submit Button */
 .submit-btn {
-    background-color: #60b7e1;
+    background-color: #007BFF;
     color: #fff;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 12px 24px;
+    font-size: 1.1rem;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
 }
 
 .submit-btn:hover {
-    background-color: #4ea4c8;
-    transform: translateY(-3px);
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 .submit-btn:active {
@@ -113,9 +153,42 @@
 }
 
 /* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card-image {
+        display: none;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
+
 @media (min-width: 768px) {
     .form-container {
-        padding: 60px 80px;
+        padding: 40px 60px;
+    }
+
+    .form-container h2 {
+        font-size: 2.75rem;
+    }
+
+    .form-container p {
+        font-size: 1.2rem;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-container {
+        padding: 50px 80px;
     }
 
     .form-container h2 {
@@ -123,31 +196,12 @@
     }
 
     .form-container p {
-        font-size: 1.4rem;
-    }
-
-    .form-group input, 
-    .form-group textarea {
-        font-size: 1.2rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .form-container {
-        padding: 70px 100px;
-    }
-
-    .form-container h2 {
-        font-size: 3.5rem;
-    }
-
-    .form-container p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .submit-btn {
-        padding: 18px 40px;
-        font-size: 1.4rem;
+        padding: 14px 28px;
+        font-size: 1.2rem;
     }
 }
 

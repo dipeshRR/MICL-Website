@@ -6,31 +6,40 @@
     padding: 40px 20px;
     position: relative;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
+/* Container for the footer sections */
 .footer-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Individual footer sections */
 .footer-section {
     flex: 1;
     min-width: 200px;
 }
 
+/* Footer section titles */
 .footer-section h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 10px;
+    font-weight: 600;
+    color: #fff;
 }
 
+/* Underline effect for footer section titles */
 .footer-section h2::after {
     content: '';
     display: block;
-    width: 50px;
+    width: 60px;
     height: 3px;
     background: #ff5722;
     position: absolute;
@@ -39,39 +48,50 @@
     transition: width 0.3s ease;
 }
 
+/* Hover effect on section titles */
 .footer-section h2:hover::after {
-    width: 100px;
+    width: 120px;
 }
 
+/* List styles */
 .social-links, .contact-info, .footer-links {
     list-style: none;
     padding: 0;
 }
 
+/* List item spacing */
 .social-links li, .contact-info li, .footer-links li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
+/* Link styles */
 .social-links a, .contact-info a, .footer-links a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 1rem;
 }
 
+/* Hover effect on links */
 .social-links a:hover, .contact-info a:hover, .footer-links a:hover {
     color: #ff5722;
 }
 
+/* Bottom section styling */
 .footer-bottom {
     background-color: #222;
     padding: 20px;
     text-align: center;
+    border-top: 1px solid #444;
 }
 
+/* Bottom section text styling */
 .footer-bottom p {
     margin: 0;
+    font-size: 0.875rem;
 }
 
+/* Back to top button */
 .footer-bottom .back-to-top {
     display: inline-block;
     margin-top: 10px;
@@ -79,8 +99,10 @@
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-size: 1rem;
 }
 
+/* Hover effect on back to top button */
 .footer-bottom .back-to-top:hover {
     color: #fff;
 }
@@ -89,5 +111,9 @@
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
     }
 }

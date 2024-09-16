@@ -1,0 +1,104 @@
+/* Section Styling */
+.pricing-section {
+    background-color: #f4f4f4; /* Light, neutral background */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.pricing-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: auto;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+/* Heading */
+.pricing-section h2 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+/* Table Container */
+.pricing-table-container {
+    overflow-x: auto; /* Enables horizontal scrolling for small screens */
+}
+
+/* Table Styling */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.pricing-table thead th {
+    background-color: #f0f0f0; /* Light gray for headers */
+    color: #333;
+    font-size: 1.1rem;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.pricing-table tbody td {
+    padding: 15px 16px;
+    color: #666;
+    font-size: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pricing-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: #007BFF; /* Primary color */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 60px 10px;
+    }
+
+    .pricing-table thead th {
+        font-size: 1rem;
+    }
+
+    .pricing-table tbody td {
+        font-size: 0.875rem;
+    }
+
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}

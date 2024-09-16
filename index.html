@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/project-location.css">
     <link rel="stylesheet" href="./css/contact-form.css">
+    <link rel="stylesheet" href="./css/pricing-section.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
@@ -307,6 +311,58 @@
             </div>
         </section>
 
+        <section class="pricing-section">
+            <div class="container">
+                <h2>MICL Avaan Pricing & Configurations</h2>
+                <div class="pricing-table-container">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Carpet Area</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3 BHK</td>
+                                <td>1300 Sq. ft.</td>
+                                <td>8 Cr+</td>
+                            </tr>
+                            <tr>
+                                <td>3 BHK</td>
+                                <td>1480 Sq. ft.</td>
+                                <td>On Request</td>
+                            </tr>
+                            <tr>
+                                <td>4 BHK</td>
+                                <td>1997 Sq. ft.</td>
+                                <td>On Request</td>
+                            </tr>
+                            <tr>
+                                <td>4 BHK</td>
+                                <td>2581 Sq. ft.</td>
+                                <td>On Request</td>
+                            </tr>
+                            <tr>
+                                <td>5 BHK</td>
+                                <td>3165 Sq. ft.</td>
+                                <td>On Request</td>
+                            </tr>
+                            <tr>
+                                <td>5 BHK</td>
+                                <td>3282 Sq. ft.</td>
+                                <td>On Request</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="mailto:info@miclgroup.in?subject=Request for Best Price" class="cta-button">Send Me The Best Price</a>
+            </div>
+        </section>
+        
+        
+        
         <section class="project-location">
             <div class="location-container">
                 <div class="map">
@@ -327,30 +383,36 @@
         </section>
         
         <section class="contact-form-section">
-            <div class="form-container">
-                <h2>Get in Touch</h2>
-                <p>Fill out the form below, and our team will contact you shortly.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Email Address</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="phone" name="phone" required>
-                        <label for="phone">Phone Number</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+            <div class="card-container">
+                <div class="card-image">
+                    <img src="./asset/Elevation.jpg" alt="Contact Image">
+                </div>
+                <div class="form-container">
+                    <h2>Get in Touch</h2>
+                    <p>Fill out the form below, and our team will contact you shortly.</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="phone" name="phone" required placeholder=" ">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </section>
+        
         
         
     </main>
@@ -361,9 +423,9 @@
                 <h2>Follow us on</h2>
                 <ul class="social-links">
                     <!-- Add your social media links here -->
-                    <li><a href="#" class="social-icon">Facebook</a></li>
-                    <li><a href="#" class="social-icon">Twitter</a></li>
-                    <li><a href="#" class="social-icon">Instagram</a></li>
+                    <li><a href="#" class="social-icon" aria-label="Facebook">Facebook</a></li>
+                    <li><a href="#" class="social-icon" aria-label="Twitter">Twitter</a></li>
+                    <li><a href="#" class="social-icon" aria-label="Instagram">Instagram</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -408,9 +470,10 @@
         </div>
         <div class="footer-bottom">
             <p>© Copyright 2023 - MICL Group</p>
-            <a href="#hero-section" class="back-to-top">BACK TO TOP</a>
+            <a href="#hero-section" class="back-to-top" aria-label="Back to top">BACK TO TOP</a>
         </div>
     </footer>
+    
 
 
 
